@@ -12,7 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $links = [
+        'https://laravel.com/docs' => 'Documentation',
+        'https://laracasts.com' => 'Laracasts'
+    ];
+    return view('welcome', [
+        'teacher' => 'Lorem Ipsum',
+        'links' => $links
+    ]);
 });
 
 Route::get('/acerca', function () {
