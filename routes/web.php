@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'PagesController@home');
+Route::get('/mensajes/{mensaje}', 'MensajesController@mostrar');
