@@ -11,17 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    $links = [
-        'https://laravel.com/docs' => 'Documentation',
-        'https://laracasts.com' => 'Laracasts'
-    ];
-    return view('welcome', [
-        'teacher' => 'Lorem Ipsum',
-        'links' => $links
-    ]);
-});
-
-Route::get('/acerca', function () {
-    return view('about');
-});
+Route::get('/', 'PagesController@home');
+Route::get('/acerca', 'PagesController@about');
