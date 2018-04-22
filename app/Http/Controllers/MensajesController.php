@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mensaje;
+use App\Http\Requests\CrearMensajeRequest;
 use Illuminate\Http\Request;
 
 class MensajesController extends Controller
@@ -13,8 +14,11 @@ class MensajesController extends Controller
         ]);
     }
 
-    public function crear(Request $request) {
-        //dd($request->all());
-        return 'creado';
+    public function crear(CrearMensajeRequest $request) {
+        $mensaje = Mensaje::create([
+            'contenido' => $request->input('mensaje'),
+            'imagen' => 'http://via.placeholder.com/600x338'
+        ]);
+        return redirect('/mensajes/' . $mensaje->id);
     }
 }
