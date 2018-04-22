@@ -7,17 +7,30 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function home() {
-        $links = [
-            'https://laravel.com/docs' => 'Documentation',
-            'https://laracasts.com' => 'Laracasts'
+        $mensajes = [
+            [
+                'id' => 1,
+                'contenido' => 'Primer Mensaje',
+                'imagen' => 'http://via.placeholder.com/600x338'
+            ],
+            [
+                'id' => 2,
+                'contenido' => 'Segundo Mensaje',
+                'imagen' => 'http://via.placeholder.com/600x338'
+            ],
+            [
+                'id' => 3,
+                'contenido' => 'Tercer Mensaje',
+                'imagen' => 'http://via.placeholder.com/600x338'
+            ],
+            [
+                'id' => 4,
+                'contenido' => 'Cuarto Mensaje',
+                'imagen' => 'http://via.placeholder.com/600x338'
+            ],
         ];
         return view('welcome', [
-            'teacher' => 'Lorem Ipsum',
-            'links' => $links
+            'mensajes' => $mensajes
         ]);
-    }
-
-    public function about() {
-        return view('about');
     }
 }
