@@ -12,6 +12,14 @@
     </nav>
 </div>
 <div class="row">
+    <form action="/mensajes/crear" method="post">
+        <div class="form-group">
+            {{ csrf_field() }}
+            <input class="form-control" type="text" name="mensaje" placeholder="Escribe algo">
+        </div>
+    </form>
+</div>
+<div class="row">
     @forelse($mensajes as $mensaje)
         <div class="col-6">
             <img class="img-thumbnail" src="{{ $mensaje->imagen }}">

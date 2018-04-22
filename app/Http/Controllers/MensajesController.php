@@ -12,4 +12,9 @@ class MensajesController extends Controller
             'mensaje' => $mensaje
         ]);
     }
+
+    public function crear(Request $request) {
+        //dd($request->all());
+        return 'creado';
+    }
 }
