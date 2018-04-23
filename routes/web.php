@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'PagesController@home');
-Route::get('/mensajes/{mensaje}', 'MensajesController@mostrar');
-Route::post('/mensajes/crear', 'MensajesController@crear');
+Route::get('/messages/{message}', 'MessagesController@show');
+Route::post('/messages/create', 'MessagesController@create');
 
 Auth::routes();

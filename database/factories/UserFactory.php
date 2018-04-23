@@ -22,9 +22,9 @@ $factory->define(App\User::class, function (Faker $faker) {
     ];
 });
 
-$factory->define(App\Mensaje::class, function (Faker $faker) {
+$factory->define(App\Message::class, function (Faker $faker) {
     return [
-        'contenido' => $faker->realText(random_int(40, 60)),
-        'imagen' => $faker->imageUrl(600, 338),
+        'content' => $faker->realText(random_int(40, 60)),
+        'image' => $faker->imageUrl(600, 338),
     ];
 });

@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CrearMensajeRequest extends FormRequest
+class CreateMessageRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,14 +24,14 @@ class CrearMensajeRequest extends FormRequest
     public function rules()
     {
         return [
-            'mensaje' => ['required', 'max:180']
+            'message' => ['required', 'max:180']
         ];
     }
 
     public function messages() {
         return [
-            'mensaje.required' => 'El mensaje no puede estar vacío',
-            'mensaje.max' => 'El mensaje no puede superar los 180 caracteres',
+            'message.required' => 'El mensaje no puede estar vacío',
+            'message.max' => 'El mensaje no puede superar los 180 caracteres',
         ];
     }
 }

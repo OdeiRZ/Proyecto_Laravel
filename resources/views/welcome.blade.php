@@ -12,12 +12,12 @@
     </nav>
 </div>
 <div class="row">
-    <form action="/mensajes/crear" method="post">
+    <form action="/messages/create" method="post">
         <div class="form-group">
             {{ csrf_field() }}
-            <input class="form-control @if($errors->has('mensaje')) is-invalid @endif" type="text" name="mensaje" placeholder="Escribe algo">
-            @if ($errors->has('mensaje'))
-                @foreach($errors->get('mensaje') as $error)
+            <input class="form-control @if($errors->has('message')) is-invalid @endif" type="text" name="message" placeholder="Escribe un mensaje">
+            @if ($errors->has('message'))
+                @foreach($errors->get('message') as $error)
                 <div class="invalid-feedback">{{ $error }}</div>
                 @endforeach
             @endif
@@ -25,21 +25,21 @@
     </form>
 </div>
 <div class="row">
-    @forelse($mensajes as $mensaje)
+    @forelse($messages as $message)
         <div class="col-6">
-            <img class="img-thumbnail" src="{{ $mensaje->imagen }}">
+            <img class="img-thumbnail" src="{{ $message->image }}">
             <p class="card-text">
-                {{ $mensaje->contenido }}
-                <a href="/mensajes/{{ $mensaje->id }}">Leer más</a>
+                {{ $message->content }}
+                <a href="/messages/{{ $message->id }}">Leer más</a>
             </p>
         </div>
     @empty
         <p>No hay mensajes destacados</p>
     @endforelse
 
-    @if(count($mensajes))
+    @if(count($messages))
         <div class="mt-2 mx-auto">
-            {{ $mensajes->links(/*'pagination::bootstrap-4'*/) }}
+            {{ $messages->links(/*'pagination::bootstrap-4'*/) }}
         </div>
     @endif
 </div>

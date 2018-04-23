@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddCreatedAtIndexToMessagesTable extends Migration
+class AddUserIdColumnToMessagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,8 @@ class AddCreatedAtIndexToMessagesTable extends Migration
     public function up()
     {
         Schema::table('messages', function (Blueprint $table) {
-            $table->index('created_at');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -26,7 +27,8 @@ class AddCreatedAtIndexToMessagesTable extends Migration
     public function down()
     {
         Schema::table('messages', function (Blueprint $table) {
-            $table->dropIndex('mensajes_created_at_index');
+            $table->dropForeign('messages_user_id_foreign');
+            $table->dropColumn('user_id');
         });
     }
 }
