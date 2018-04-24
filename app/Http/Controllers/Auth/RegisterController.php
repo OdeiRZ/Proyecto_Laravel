@@ -72,4 +72,28 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+
+    /*public function messages() {
+        return [
+            'name.required' => 'El nombre no puede estar vacío',
+            'name.string' => 'El nombre debe ser una cadena de texto',
+            'name.max' => 'El nombre no puede superar los 255 caracteres',
+
+            'username.required' => 'El nombre de usuario no puede estar vacío',
+            'username.string' => 'El nombre de usuario debe ser una cadena de texto',
+            'username.max' => 'El nombre de usuario no puede superar los 40 caracteres',
+            'username.unique' => 'El nombre de usuario ya está en uso',
+
+            'email.required' => 'El correo no puede estar vacío',
+            'email.string' => 'El correo debe ser una cadena de texto',
+            'email.email' => 'El correo debe tener formato de email',
+            'email.max' => 'El correo no puede superar los 255 caracteres',
+            'email.unique' => 'El correo ya está en uso',
+
+            'password.required' => 'La contraseña no puede estar vacía',
+            'password.string' => 'La contraseña debe ser una cadena de texto',
+            'password.min' => 'La contraseña debe ser superior a 6 caracteres',
+            'password.confirmed' => 'Las contraseñas deben coincidir',
+        ];
+    }*/
 }
