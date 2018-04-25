@@ -26,17 +26,17 @@
 </div>
 <div class="row">
     @forelse($messages as $message)
-        <div class="col-6">
-            @include('messages.message')
-        </div>
+    <div class="col-6">
+        @include('messages.message')
+    </div>
     @empty
-        <p>No hay mensajes destacados</p>
+    <p>No hay mensajes destacados</p>
     @endforelse
 
     @if(count($messages))
-        <div class="mt-2 mx-auto">
-            {{ $messages->links(/*'pagination::bootstrap-4'*/) }}
-        </div>
+    <div class="mt-2 mx-auto">
+        {{ $messages->links(/*'pagination::bootstrap-4'*/) }}
+    </div>
     @endif
 </div>
 @endsection

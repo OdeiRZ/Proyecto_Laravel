@@ -9,8 +9,14 @@ class UsersController extends Controller
 {
     public function show($username) {
         $user = User::where('username', $username)->first();
-        return view('users.show', [
-            'user' => $user
-        ]);
+        if ($user) {
+            $messages = $user->messages()->paginate(10);
+            return view('users.show', [
+                'user' => $user,
+                'messages' => $messages
+            ]);
+        } else {
+            return redirect('/');
+        }
     }
 }
