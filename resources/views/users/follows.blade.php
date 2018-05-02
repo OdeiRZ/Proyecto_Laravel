@@ -3,7 +3,7 @@
 @section('content')
     <h1 class="h3">{{ $user->name }}</h1>
     <div class="row">
-        @forelse($user->follows as $follow)
+        @forelse($follows as $follow)
         <div class="col-6">
             {{ $follow->username }}
         </div>

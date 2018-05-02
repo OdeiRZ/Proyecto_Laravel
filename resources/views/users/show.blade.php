@@ -2,13 +2,32 @@
 
 @section('content')
     <h1 class="h3">{{ $user->name }}</h1>
-    <form action="/{{ $user->username }}/follow" method="post">
-        {{ csrf_field() }}
-        @if (session('success'))
-        <span class="text-success">{{ session('success') }}</span>
+    <a href="/{{ $user->username }}/follows" class="btn btn-link">
+        Sigue a <span class="badge badge-secondary">{{ $user->follows->count() }}</span>
+    </a>
+    <a href="/{{ $user->username }}/followers" class="btn btn-link">
+        Seguidores <span class="badge badge-secondary">{{ $user->followers->count() }}</span>
+    </a>
+    @if(Auth::check())
+        @if(Auth::user()->isFollowing($user))
+        <form action="/{{ $user->username }}/unfollow" method="post">
+            {{ csrf_field() }}
+            @if (session('success'))
+                <span class="text-success">{{ session('success') }}</span>
+            @endif
+            <button class="btn btn-danger">Dejar de seguir</button>
+        </form>
+        @else
+        <form action="/{{ $user->username }}/follow" method="post">
+            {{ csrf_field() }}
+            @if (session('success'))
+                <span class="text-success">{{ session('success') }}</span>
+            @endif
+            <button class="btn btn-primary">Seguir</button>
+        </form>
         @endif
-        <button class="btn btn-primary">Seguir</button>
-    </form>
+    @endif
+
     <div class="row">
         @forelse($messages as $message) {{--$user->messages--}}
         <div class="col-6">
