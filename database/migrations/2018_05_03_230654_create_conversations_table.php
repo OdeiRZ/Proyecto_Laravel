@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSocialProfilesTable extends Migration
+class CreateConversationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,9 @@ class CreateSocialProfilesTable extends Migration
      */
     public function up()
     {
-        Schema::create('social_profiles', function (Blueprint $table) {
+        Schema::create('conversations', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-
-            $table->integer('user_id')->unsigned();
-            $table->string('social_id');
-
-            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -31,6 +26,6 @@ class CreateSocialProfilesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('social_profiles');
+        Schema::dropIfExists('conversations');
     }
 }

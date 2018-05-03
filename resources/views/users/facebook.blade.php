@@ -25,10 +25,5 @@
                 <button class="btn btn-primary" type="submit">Registrarse</button>
             </div>
         </div>
-
-        @if (session('success'))
-            <span class="text-success">{{ session('success') }}</span>
-        @endif
-        <button class="btn btn-primary">Seguir</button>
     </form>
 @endsection
