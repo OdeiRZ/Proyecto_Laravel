@@ -62,11 +62,9 @@
                         </div>
                     </form>
                 </div>
+                <a href="/auth/facebook" class="btn btn-primary">Login con Facebook</a>
             </div>
         </div>
     </div>
-</div>
-<div class="container">
-    <a href="/auth/facebook" class="btn btn-primary">Login con Facebook</a>
 </div>
 @endsection
