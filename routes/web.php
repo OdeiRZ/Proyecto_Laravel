@@ -15,14 +15,18 @@ Auth::routes();
 
 Route::get('/', 'PagesController@home');
 Route::get('/messages/{message}', 'MessagesController@show');
-Route::post('/messages/create', 'MessagesController@create')->middleware('auth');
 Route::get('/auth/facebook', 'SocialAuthController@facebook');
 Route::get('/auth/facebook/callback', 'SocialAuthController@callback');
 Route::post('/auth/facebook/register', 'SocialAuthController@register');
 Route::get('/home', 'HomeController@index');
+Route::group(['middleware' => 'auth'], function() {
+    Route::post('/messages/create', 'MessagesController@create');
+    Route::get('/conversation/{conversation}', 'UsersController@showConversation');
+    Route::post('/{username}/dms', 'UsersController@sendPrivateMessage');
+    Route::post('/{username}/follow', 'UsersController@follow');
+    Route::post('/{username}/unfollow', 'UsersController@unfollow');
+});
 Route::get('/{username}', 'UsersController@show');
 Route::get('/{username}/follows', 'UsersController@follows');
 Route::get('/{username}/followers', 'UsersController@followers');
-Route::post('/{username}/follow', 'UsersController@follow');
-Route::post('/{username}/unfollow', 'UsersController@unfollow');
 Route::get('/messages/{username}', 'UsersController@show');
