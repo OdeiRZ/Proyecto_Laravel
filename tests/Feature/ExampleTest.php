@@ -15,7 +15,15 @@ class ExampleTest extends TestCase
     public function testBasicTest()
     {
         $response = $this->get('/');
-
+        // Esperemos que la respuesta de la raiz sea un estado 200
         $response->assertStatus(200);
+        // Buscamos el texto Laravel en la raiz del proyecto /
+        $response->assertSee('Laravel');
+    }
+
+    public function testCanSearchForMessage()
+    {
+        $response = $this->get('/messages?query=Odei');
+        $response->assertSee('Odei');
     }
 }
