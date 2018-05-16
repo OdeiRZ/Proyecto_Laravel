@@ -4,7 +4,7 @@
         <div class="col-12 mt-2" v-for="response in responses">
             <div class="card">
                 <div class="card-header">
-                    {{ response.message }}
+                    <b>{{ response.user.username }}</b>: {{ response.message }}
                 </div>
                 <div class="card-footer text-muted">
                     {{ response.created_at }}

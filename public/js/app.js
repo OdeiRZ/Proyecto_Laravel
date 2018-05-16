@@ -47373,11 +47373,8 @@ var render = function() {
         return _c("div", { staticClass: "col-12 mt-2" }, [
           _c("div", { staticClass: "card" }, [
             _c("div", { staticClass: "card-header" }, [
-              _vm._v(
-                "\n                " +
-                  _vm._s(response.message) +
-                  "\n            "
-              )
+              _c("b", [_vm._v(_vm._s(response.user.username))]),
+              _vm._v(": " + _vm._s(response.message) + "\n            ")
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-footer text-muted" }, [
