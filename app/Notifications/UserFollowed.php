@@ -4,6 +4,7 @@ namespace App\Notifications;
 
 use App\User;
 use Illuminate\Bus\Queueable;
+use Illuminate\Notifications\Messages\BroadcastMessage;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
@@ -32,7 +33,7 @@ class UserFollowed extends Notification
      */
     public function via($notifiable)
     {
-        return ['mail', 'database'];
+        return ['mail', 'database', 'broadcast'];
     }
 
     /**
@@ -60,7 +61,14 @@ class UserFollowed extends Notification
     public function toArray($notifiable)
     {
         return [
-            'follower' => $this->follower
+            'follower' => $this->follower,
         ];
+    }
+
+    public function toBroadcast($notifiable)
+    {
+        return new BroadcastMessage([
+            'data' => $this->toArray($notifiable),
+        ]);
     }
 }
