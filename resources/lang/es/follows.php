@@ -4,15 +4,10 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | App Language Lines
+    | Follows Language Lines
     |--------------------------------------------------------------------------
     */
 
-    'search' => 'Buscar',
-    'eng' => 'English',
-    //'spa' => 'Español',
-    'enter' => 'Entrar',
-    'register' => 'Registrarse',
-    'exit' => 'Salir',
+    'no-followers' => 'El usuario no tiene seguidores',
 
 ];

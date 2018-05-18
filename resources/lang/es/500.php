@@ -4,15 +4,10 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | App Language Lines
+    | 500 Language Lines
     |--------------------------------------------------------------------------
     */
 
-    'search' => 'Buscar',
-    'eng' => 'English',
-    //'spa' => 'Español',
-    'enter' => 'Entrar',
-    'register' => 'Registrarse',
-    'exit' => 'Salir',
+    'error' => 'Se ha producido un error',
 
 ];

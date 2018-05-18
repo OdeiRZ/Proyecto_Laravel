@@ -9,20 +9,20 @@
             </div>
             <div class="card-block">
                 <div class="form-group">
-                    <label for="name" class="form-control-label">Nombre</label>
+                    <label for="name" class="form-control-label">{{ __('facebook.name') }}</label>
                     <input class="form-control" type="text" name="name" value="{{ $user->name }}" readonly>
                 </div>
                 <div class="form-group">
-                    <label for="email" class="form-control-label">Email</label>
+                    <label for="email" class="form-control-label">{{ __('facebook.email') }}</label>
                     <input class="form-control" type="text" name="email" value="{{ $user->email }}" readonly>
                 </div>
                 <div class="form-group">
-                    <label for="username" class="form-control-label">Nombre de usuario</label>
+                    <label for="username" class="form-control-label">{{ __('facebook.user') }}</label>
                     <input class="form-control" type="text" name="username" value="{{ old('username') }}">
                 </div>
             </div>
             <div class="card-footer">
-                <button class="btn btn-primary" type="submit">Registrarse</button>
+                <button class="btn btn-primary" type="submit">{{ __('facebook.register') }}</button>
             </div>
         </div>
     </form>

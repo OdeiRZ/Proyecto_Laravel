@@ -8,7 +8,7 @@
             {{ $follow->username }}
         </div>
         @empty
-        <p class="col-6 pt-3">El usuario no tiene seguidores</p>
+        <p class="col-6 pt-3">{{ __('follows.no-followers') }}</p>
         @endforelse
     </div>
 @endsection

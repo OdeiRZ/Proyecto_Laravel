@@ -52357,7 +52357,7 @@ var render = function() {
           attrs: { href: "#" },
           on: { click: _vm.load }
         },
-        [_vm._v("Ver Respuestas")]
+        [_vm._v(" " + _vm._s(_vm.message.answers))]
       ),
       _vm._v(" "),
       _vm._l(_vm.responses, function(response) {

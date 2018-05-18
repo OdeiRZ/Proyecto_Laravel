@@ -4,15 +4,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | App Language Lines
+    | Message Language Lines
     |--------------------------------------------------------------------------
     */
 
-    'search' => 'Buscar',
-    'eng' => 'English',
-    //'spa' => 'Español',
-    'enter' => 'Entrar',
-    'register' => 'Registrarse',
-    'exit' => 'Salir',
+    'written' => 'Written by',
+    'more' => 'Read more',
+    'answers' => 'See Answers',
 
 ];

@@ -4,15 +4,14 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | App Language Lines
+    | Reset Language Lines
     |--------------------------------------------------------------------------
     */
 
-    'search' => 'Buscar',
-    'eng' => 'English',
-    //'spa' => 'Español',
-    'enter' => 'Entrar',
-    'register' => 'Registrarse',
-    'exit' => 'Salir',
+    'title' => 'Reset Password',
+    'email' => 'E-Mail Address',
+    'password' => 'Password',
+    'confirm' => 'Confirm Password',
+    'reset' => 'Reset Password',
 
 ];

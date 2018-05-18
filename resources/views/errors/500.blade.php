@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">Se ha producido un error</div>
+    <div class="container">{{ __('500.error') }}</div>
 @endsection

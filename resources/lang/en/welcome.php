@@ -4,15 +4,13 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | App Language Lines
+    | Welcome Language Lines
     |--------------------------------------------------------------------------
     */
 
-    'search' => 'Buscar',
-    'eng' => 'English',
-    //'spa' => 'Español',
-    'enter' => 'Entrar',
-    'register' => 'Registrarse',
-    'exit' => 'Salir',
+    'title' => 'Laravel Proyect',
+    'home' => 'Home',
+    'write_message' => 'Write a message',
+    'no_messages' => 'There are not messages',
 
 ];

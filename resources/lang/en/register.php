@@ -4,16 +4,16 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Login Language Lines
+    | Register Language Lines
     |--------------------------------------------------------------------------
     */
 
-    'access' => 'Sign In',
+    'title' => 'Sign Up',
+    'name' => 'Name',
+    'user' => 'User',
     'email' => 'E-Mail',
     'password' => 'Password',
-    'remenber-me' => 'Remenber me',
-    'enter' => 'Enter',
-    'forgot' => 'Forgot your password?',
-    'facebook' => 'Login with Facebook',
+    'password2' => 'Confirm Password',
+    'register' => 'Register',
 
 ];

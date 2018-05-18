@@ -2,11 +2,11 @@
 
 @section('content')
 <div class="jumbotron text-center">
-    <h1>Proyecto Laravel</h1>{{ __('app.exit') }}
+    <h1>{{ __('welcome.title') }}</h1>
     <nav>
         <ul class="nav nav-pills">
             <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/">{{ __('welcome.home') }}</a>
             </li>
         </ul>
     </nav>
@@ -15,7 +15,8 @@
     <form action="/messages/create" method="post" enctype="multipart/form-data">
         <div class="form-group">
             {{ csrf_field() }}
-            <input class="form-control @if($errors->has('message')) is-invalid @endif" type="text" name="message" placeholder="Escribe un mensaje">
+            <input class="form-control @if($errors->has('message')) is-invalid @endif" type="text" name="message"
+                   placeholder="{{ __('welcome.write_message') }}">
             @if ($errors->has('message'))
                 @foreach($errors->get('message') as $error)
                 <div class="invalid-feedback">{{ $error }}</div>
@@ -31,7 +32,7 @@
         @include('messages.message')
     </div>
     @empty
-    <p>No hay mensajes destacados</p>
+    <p>{{ __('welcome.no_messages') }}</p>
     @endforelse
 
     @if(count($messages))

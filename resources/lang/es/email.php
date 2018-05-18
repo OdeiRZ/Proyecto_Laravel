@@ -4,15 +4,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | App Language Lines
+    | Email Language Lines
     |--------------------------------------------------------------------------
     */
 
-    'search' => 'Buscar',
-    'eng' => 'English',
-    //'spa' => 'Español',
-    'enter' => 'Entrar',
-    'register' => 'Registrarse',
-    'exit' => 'Salir',
+    'title' => 'Reiniciar Contraseña',
+    'email' => 'Dirección E-Mail',
+    'reset' => 'Enviar enlace de reseteo',
 
 ];

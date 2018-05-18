@@ -4,15 +4,13 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | App Language Lines
+    | Facebook Language Lines
     |--------------------------------------------------------------------------
     */
 
-    'search' => 'Buscar',
-    'eng' => 'English',
-    //'spa' => 'Español',
-    'enter' => 'Entrar',
-    'register' => 'Registrarse',
-    'exit' => 'Salir',
+    'name' => 'Name',
+    'email' => 'E-Mail',
+    'user' => 'Username',
+    'register' => 'Sign Up',
 
 ];

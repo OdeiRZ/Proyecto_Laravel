@@ -4,16 +4,16 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Login Language Lines
+    | Register Language Lines
     |--------------------------------------------------------------------------
     */
 
-    'access' => 'Regístrate',
+    'title' => 'Registro',
+    'name' => 'Nombre',
+    'user' => 'Usuario',
     'email' => 'E-Mail',
     'password' => 'Contraseña',
-    'remenber-me' => 'Recuérdame',
-    'enter' => 'Entrar',
-    'forgot' => '¿Olvidaste tu Contraseña?',
-    'facebook' => 'Accede con Facebook',
+    'password2' => 'Confirmar Contraseña',
+    'register' => 'Registrarse',
 
 ];

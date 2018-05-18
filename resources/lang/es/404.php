@@ -4,15 +4,10 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | App Language Lines
+    | 404 Language Lines
     |--------------------------------------------------------------------------
     */
 
-    'search' => 'Buscar',
-    'eng' => 'English',
-    //'spa' => 'Español',
-    'enter' => 'Entrar',
-    'register' => 'Registrarse',
-    'exit' => 'Salir',
+    'error' => 'La página que solicitas no está disponible',
 
 ];
