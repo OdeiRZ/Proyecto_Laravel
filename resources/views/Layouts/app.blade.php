@@ -36,9 +36,9 @@
                         <li class="nav-item">
                             <form action="/messages">
                                 <div class="input-group">
-                                    <input type="text" name="query" class="form-control" placeholder="Buscar..." required>
+                                    <input type="text" name="query" class="form-control" placeholder="{{ __('app.search') }}..." required>
                                     <span class="input-group-btn">
-                                        <button class="btn btn-outline-success">Buscar</button>
+                                        <button class="btn btn-outline-success">{{ __('app.search') }}</button>
                                     </span>
                                 </div>
                             </form>
@@ -47,10 +47,15 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        @if(App::isLocale('es'))
+                            <a class="nav-link" href="/locale?lang=en">{{ __('app.eng') }}</a>
+                        @else
+                            <a class="nav-link" href="/locale?lang=es">{{ __('app.spa') }}</a>
+                        @endif
                         <!-- Authentication Links -->
                         @guest
-                        <li><a class="nav-link" href="{{ route('login') }}">{{ __('Entrar') }}</a></li>
-                        <li><a class="nav-link" href="{{ route('register') }}">{{ __('Registrarse') }}</a></li>
+                        <li><a class="nav-link" href="{{ route('login') }}">{{ __('app.enter') }}</a></li>
+                        <li><a class="nav-link" href="{{ route('register') }}">{{ __('app.register') }}</a></li>
                         @else
                             <li class="nav-item dropdown mr-2">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
@@ -67,7 +72,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
-                                        {{ __('Salir') }}
+                                        {{ __('app.exit') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
