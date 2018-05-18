@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="jumbotron text-center">
-    <h1>Proyecto Laravel</h1>
+    <h1>Proyecto Laravel</h1>{{ __('app.exit') }}
     <nav>
         <ul class="nav nav-pills">
             <li class="nav-item">
