@@ -21,3 +21,7 @@ Vue.component('notifications', require('./components/Notifications.vue'));
 const app = new Vue({
     el: '#app'
 });
+
+Vue.prototype.trans = (key) => {
+    return _.get(window.trans, key, key);
+};

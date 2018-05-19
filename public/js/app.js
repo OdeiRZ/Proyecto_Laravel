@@ -14007,6 +14007,10 @@ var app = new Vue({
   el: '#app'
 });
 
+Vue.prototype.trans = function (key) {
+  return _.get(window.trans, key, key);
+};
+
 /***/ }),
 /* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -52318,12 +52322,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['message'],
     data: function data() {
         return {
-            responses: []
+            responses: [],
+            trans: trans //answers: trans['message']['answers'],
         };
     },
 
@@ -52357,7 +52364,7 @@ var render = function() {
           attrs: { href: "#" },
           on: { click: _vm.load }
         },
-        [_vm._v(" " + _vm._s(_vm.message.answers))]
+        [_vm._v("\n        " + _vm._s(_vm.trans.message.answers) + " ")]
       ),
       _vm._v(" "),
       _vm._l(_vm.responses, function(response) {

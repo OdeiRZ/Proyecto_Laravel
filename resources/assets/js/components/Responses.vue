@@ -1,6 +1,8 @@
 <template>
     <div class="row justify-content-center">
-        <a href="#" class="btn btn-outline-primary" v-on:click="load"> {{ message.answers }}</a>
+        <a href="#" class="btn btn-outline-primary" v-on:click="load">
+            {{ trans.message.answers }} <!--{{ answers }}-->
+        </a>
         <div class="col-12 mt-2" v-for="response in responses">
             <div class="card">
                 <div class="card-header">
@@ -20,6 +22,7 @@
         data() {
             return {
                 responses: [ ],
+                trans: trans, //answers: trans['message']['answers'],
             }
         },
         methods: {
