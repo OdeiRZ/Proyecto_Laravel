@@ -28,14 +28,14 @@ class UsersController extends Controller
         $me = $request->user();
         $me->follows()->attach($user);
         $user->notify(new UserFollowed($me));
-        return redirect("/$username")->withSuccess("¡Usuario Seguido!");
+        return redirect("/$username");//->withSuccess("¡Usuario Seguido!");
     }
 
     public function unfollow($username, Request $request) {
         $user = $this->findByUsername($username);
         $me = $request->user();
         $me->follows()->detach($user);
-        return redirect("/$username")->withSuccess("¡Usuario dejado de Seguir!");
+        return redirect("/$username");//->withSuccess("¡Usuario dejado de Seguir!");
     }
 
     public function follows($username) {
