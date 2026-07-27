@@ -9,7 +9,7 @@ class Message extends Model
 {
     use Searchable;
 
-    protected $guarded = [];
+    protected $fillable = ['user_id', 'content', 'image'];
 
     public function user() {
         return $this->belongsTo(User::class);

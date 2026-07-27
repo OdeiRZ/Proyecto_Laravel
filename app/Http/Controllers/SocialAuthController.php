@@ -14,7 +14,7 @@ class SocialAuthController extends Controller
     }
 
     public function callback() {
-        $user = Socialite::driver('facebook')->stateless()->user();
+        $user = Socialite::driver('facebook')->user();
         $existing = User::whereIn('users.id', function($query) use($user) {
             $query->from('social_profiles')->
                 select('social_profiles.user_id')->where('social_profiles.social_id', $user->id);
