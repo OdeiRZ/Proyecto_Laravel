@@ -47,6 +47,10 @@ Red social estilo Twitter construida con Laravel 5.6: publicación de mensajes, 
    php artisan serve
    ```
 
+## Seguridad
+
+Corregidos varios problemas: CSRF en el login social de Facebook (se restaura la comprobación de estado de Socialite), subida de imágenes sin validar tipo/tamaño en la creación de mensajes, y asignación masiva sin restringir en varios modelos (`Message`, `PrivateMessage`, `Response`, `SocialProfile`). Actualizado `laravel/framework` para incluir el parche de CVE-2018-15133.
+
 ## Licencia
 
 MIT (heredada de la plantilla base de Laravel, ver `composer.json`). El repositorio no incluye un archivo LICENSE independiente.
